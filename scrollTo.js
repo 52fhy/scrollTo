@@ -9,7 +9,7 @@
 	* @author YJC
 	* @github https://github.com/52fhy/scrollTo
 	*/
-;(function(){
+;(function(window, $){
 	'use strict';
 	
 	var $scrollTo = $.scrollTo = function(target) {
