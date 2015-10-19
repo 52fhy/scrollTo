@@ -1,12 +1,13 @@
 /**
-	* Æ½»¬¹ö¶¯µ½Ö¸¶¨Î»ÖÃ
+	* å¹³æ»‘æ»šåŠ¨åˆ°æŒ‡å®šä½ç½®
 	* @param : target string||object 
 	* @example : $.scrollTo($('#desID'));
-	* 			$.scrollTo('300px');
-	* 			$scrollTo('300px');
+	* 	     $.scrollTo('300px');
+	* 	     $scrollTo('300px');
 	* @version 1.0
 	* @date 2015-10-19 15:09:57
 	* @author YJC
+	* @github https://github.com/52fhy/scrollTo
 	*/
 ;(function(){
 	'use strict';
@@ -43,5 +44,5 @@
 		}, 30);
 	};
 	
-	window.$scrollTo = $scrollTo; //Ö§³Ö$scrollTo('300px');´¿jsÓÃ·¨
+	window.$scrollTo = $scrollTo; //æ”¯æŒ$scrollTo('300px');çº¯jsç”¨æ³•
 })(window, window.jQuery || window.Zepto);
