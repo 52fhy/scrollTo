@@ -3,7 +3,7 @@
 
 ![demo](demo.jpg)
 
-## 特效
+## 特性
 
 * 支持滚动到确定位置
 * 支持zepto/jquery对象的传入
@@ -21,7 +21,7 @@
 ```
 
 ## 示例
-```
+```javascript
 $('.charlist').delegate('.react','click',function(){
     var href = $(this).attr('href').substr(1);
 		$.scrollTo($('#sub-' + href));
@@ -30,5 +30,5 @@ $('.charlist').delegate('.react','click',function(){
 });
 ```
 具体代码看demo:`demo.html`
-
+[demo](demo.html)
 
