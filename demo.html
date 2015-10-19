@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+ <head lang="en"> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" /> 
+  <title>car</title> 
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.js"></script> 
+  <script type="text/javascript" src="scrollTo.min.js"></script> 
+  <style>
+	body {
+	  font-size: 14px;
+	  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+	  margin: 0px;
+	  padding: 0px;
+	}
+
+	a{
+	  color: #00a5e0;
+	  text-decoration: none;
+	}
+	
+	ul,li,ol{list-style: none;}
+	ul, menu, dir {
+	  display: block;
+	  list-style-type: disc;
+	  -webkit-margin-before: 1em;
+	  -webkit-margin-after: 1em;
+	  -webkit-margin-start: 0px;
+	  -webkit-margin-end: 0px;
+	  -webkit-padding-start: 40px;
+	}
+	
+	.ui-form-item {
+	  position: relative;
+	  font-size: 16px;
+	  height: 44px;
+	  line-height: 44px;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	}
+	
+	.ui-border-b {
+	  border-bottom: 1px solid #e0e0e0;
+	}
+
+    .charlist {
+    position: fixed;
+    right: 0px;
+    margin-top: 10px;
+	padding:5px;
+    width: 16px;
+    z-index: 99;
+    background-color: #666666;
+}
+
+.lists h4{
+	margin:5px 0px 0px 15px;
+	
+	color:#00A5CC;
+	width:20px;
+}
+
+.city_item{
+	display:block;
+}
+</style>
+ </head>  
+ <body> 
+  <div class="wrapper"> 
+   <ul class="charlist"> 
+    <li><a class="react" href="#A">A</a></li> 
+    <li><a class="react" href="#B">B</a></li> 
+    <li><a class="react" href="#C">C</a></li> 
+    <li><a class="react" href="#D">D</a></li> 
+    <li><a class="react" href="#F">F</a></li> 
+    <li><a class="react" href="#G">G</a></li> 
+    <li><a class="react" href="#H">H</a></li> 
+    <li><a class="react" href="#J">J</a></li> 
+    <li><a class="react" href="#K">K</a></li> 
+    <li><a class="react" href="#L">L</a></li> 
+    <li><a class="react" href="#M">M</a></li> 
+    <li><a class="react" href="#N">N</a></li> 
+    <li><a class="react" href="#O">O</a></li> 
+    <li><a class="react" href="#Q">Q</a></li> 
+    <li><a class="react" href="#R">R</a></li> 
+    <li><a class="react" href="#S">S</a></li> 
+    <li><a class="react" href="#T">T</a></li> 
+    <li><a class="react" href="#W">W</a></li> 
+    <li><a class="react" href="#X">X</a></li> 
+    <li><a class="react" href="#Y">Y</a></li> 
+    <li><a class="react" href="#Z">Z</a></li> 
+   </ul> 
+   
+   <div id="cityBox"> 
+    <div class="lists"> 
+     <h4 id="sub-A">A</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="A" pid="1" class="city_item">AC Schnitzer</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="A" pid="9" class="city_item">奥迪</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="A" pid="755" class="city_item">阿尔法&middot;罗密欧</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="A" pid="762" class="city_item">阿斯顿&middot;马丁</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-B">B</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="824" class="city_item">保斐利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="827" class="city_item">保时捷</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1058" class="city_item">别克</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1517" class="city_item">北京汽车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1552" class="city_item">北汽制造</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1678" class="city_item">北汽威旺</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1727" class="city_item">北汽幻速</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1753" class="city_item">奔腾</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="1882" class="city_item">奔驰</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="2547" class="city_item">宝马</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3252" class="city_item">宝骏</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3346" class="city_item">宝龙</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3356" class="city_item">宾利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3423" class="city_item">巴博斯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3438" class="city_item">布加迪</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3444" class="city_item">本田</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="3871" class="city_item">标致</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="B" pid="4256" class="city_item">比亚迪</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-C">C</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="C" pid="4593" class="city_item">昌河</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="C" pid="4665" class="city_item">长城</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="C" pid="5244" class="city_item">长安商用</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="C" pid="5498" class="city_item">长安轿车</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-D">D</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="5802" class="city_item">DS</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="5856" class="city_item">东南</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6098" class="city_item">东风</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6115" class="city_item">东风小康</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6203" class="city_item">东风风度</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6420" class="city_item">东风风神</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6537" class="city_item">东风风行</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="6903" class="city_item">大众</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="8261" class="city_item">大迪汽车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="8289" class="city_item">大通</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="D" pid="8346" class="city_item">道奇</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-F">F</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="8392" class="city_item">丰田</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="9275" class="city_item">弗那萨利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="9276" class="city_item">法拉利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="9308" class="city_item">福特</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="9648" class="city_item">福田</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="10201" class="city_item">福迪</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="10239" class="city_item">菲亚特</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="10376" class="city_item">菲斯克</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="F" pid="10377" class="city_item">飞驰商务车</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-G">G</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10385" class="city_item">GMC</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10433" class="city_item">光冈</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10443" class="city_item">广汽</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10556" class="city_item">广汽吉奥</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10789" class="city_item">广汽日野</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="G" pid="10820" class="city_item">观致汽车</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-H">H</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="10848" class="city_item">华普</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="10980" class="city_item">华泰</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11130" class="city_item">华翔富奇</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11140" class="city_item">华颂</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11145" class="city_item">哈弗</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11444" class="city_item">哈飞</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11628" class="city_item">恒天汽车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11647" class="city_item">悍马</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11666" class="city_item">汇众</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11675" class="city_item">海格</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="11713" class="city_item">海马</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="12044" class="city_item">海马商用车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="12093" class="city_item">红旗</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="H" pid="12158" class="city_item">黄海</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-J">J</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12305" class="city_item">Jeep</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12499" class="city_item">九龙</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12504" class="city_item">俊风</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12505" class="city_item">吉利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12624" class="city_item">吉利全球鹰</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12842" class="city_item">吉利帝豪</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="12963" class="city_item">吉利英伦</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="13143" class="city_item">捷豹</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="13271" class="city_item">江南</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="13292" class="city_item">江淮</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="13791" class="city_item">江铃</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="14259" class="city_item">金旅客车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="14263" class="city_item">金杯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="J" pid="14741" class="city_item">金龙联合</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-K">K</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14770" class="city_item">克莱斯勒</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14821" class="city_item">凯翼</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14829" class="city_item">凯迪拉克</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14980" class="city_item">卡威</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14988" class="city_item">卡尔森</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="14997" class="city_item">开瑞</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="K" pid="15113" class="city_item">科尼塞克</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-L">L</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15118" class="city_item">兰博基尼</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15144" class="city_item">力帆</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15370" class="city_item">劳斯莱斯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15391" class="city_item">林肯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15428" class="city_item">猎豹汽车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15593" class="city_item">理念</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15610" class="city_item">罗孚</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15611" class="city_item">莲花</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15710" class="city_item">蓝海房车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15714" class="city_item">路特斯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15731" class="city_item">路虎</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="15930" class="city_item">铃木</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="16454" class="city_item">陆风</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="16643" class="city_item">雷克萨斯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="L" pid="16857" class="city_item">雷诺</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-M">M</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="16986" class="city_item">MG</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17159" class="city_item">MINI</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17271" class="city_item">摩根</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17280" class="city_item">玛莎拉蒂</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17314" class="city_item">美亚</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17324" class="city_item">迈凯伦</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17342" class="city_item">迈巴赫</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="M" pid="17350" class="city_item">马自达</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-N">N</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="N" pid="17611" class="city_item">纳智捷</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-O">O</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="O" pid="17686" class="city_item">欧宝</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="O" pid="17746" class="city_item">欧朗</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="O" pid="17758" class="city_item">讴歌</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-Q">Q</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Q" pid="17796" class="city_item">启辰</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Q" pid="17854" class="city_item">奇瑞</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Q" pid="18469" class="city_item">庆铃</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Q" pid="18518" class="city_item">起亚</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-R">R</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="R" pid="19137" class="city_item">日产</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="R" pid="19870" class="city_item">瑞麒</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="R" pid="19955" class="city_item">荣威</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-S">S</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20107" class="city_item">Smart</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20172" class="city_item">三菱</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20545" class="city_item">世爵</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20554" class="city_item">双环</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20639" class="city_item">双龙</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20782" class="city_item">斯巴鲁</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="20980" class="city_item">斯柯达</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="21237" class="city_item">绅宝</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="S" pid="21305" class="city_item">萨博</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-T">T</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="T" pid="21328" class="city_item">TESLA</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="T" pid="21329" class="city_item">天马</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="T" pid="21347" class="city_item">泰赫雅特</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-W">W</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="W" pid="21352" class="city_item">五菱</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="W" pid="21532" class="city_item">威兹曼</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="W" pid="21540" class="city_item">威麟</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="W" pid="21584" class="city_item">沃尔沃</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-X">X</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="21907" class="city_item">夏利</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22052" class="city_item">新凯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22073" class="city_item">新大地</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22080" class="city_item">新雅途</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22101" class="city_item">星客特</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22110" class="city_item">现代</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22744" class="city_item">西雅特</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="22759" class="city_item">雪佛兰</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="X" pid="23139" class="city_item">雪铁龙</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-Y">Y</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="23587" class="city_item">一汽</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="23941" class="city_item">依维柯</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="24013" class="city_item">扬州亚星客车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="24016" class="city_item">永源</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="24120" class="city_item">英致</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="24128" class="city_item">英菲尼迪</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Y" pid="24280" class="city_item">野马汽车</a> 
+      </div> 
+     </div> 
+     <h4 id="sub-Z">Z</h4> 
+     <div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24321" class="city_item">中兴</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24410" class="city_item">中华</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24693" class="city_item">中客华北</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24702" class="city_item">中欧</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24724" class="city_item">中通客车</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24725" class="city_item">中顺</a> 
+      </div> 
+      <div class="ui-form-item ui-form-item-order ui-border-b"> 
+       <a href="#" py="Z" pid="24757" class="city_item">众泰</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   
+  </div>   
+  <script>
+    $(function () {
+    	$('.charlist').delegate('.react','click',function(){
+            var href = $(this).attr('href').substr(1);
+			$.scrollTo($('#sub-' + href));
+            return false;
+        });
+
+    });
+
+</script>
+ </body>
+</html>
