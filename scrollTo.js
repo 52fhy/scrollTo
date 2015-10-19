@@ -12,23 +12,25 @@
 ;(function(window, $){
 	'use strict';
 	
-	var $scrollTo = $.scrollTo = function(target) {
-		return $(window).scrollTo(target);
-	};
-	
+	var $scrollTo;
 	var timer = null;
 	var scrollTop = 0;
-		window.onscroll=function(){
+	
+	window.onscroll=function(){
 		scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 	};
 	
-	$.fn.scrollTo = function(target) {
+	$scrollTo = function(target) {
 		var destOffsetTop = 0;
 		if(typeof target == 'string'){
 			destOffsetTop = target;
-		}else{
+		}else if(typeof target.offset == 'function'){
 			var destOffsetTopObj = target.offset();
 			destOffsetTop = destOffsetTopObj.top;
+		}else if(target.top != undefined){
+			destOffsetTop = target.top;
+		}else{
+			throw 'param target error!';
 		}
 
 		clearInterval(timer);
@@ -43,6 +45,10 @@
 			document.body.scrollTop = scrollTop + speed;
 		}, 30);
 	};
+	
+	if($ != undefined){
+		$.fn.scrollTo = $.scrollTo = $scrollTo;
+	}
 	
 	window.$scrollTo = $scrollTo; //支持$scrollTo('300px');纯js用法
 })(window, window.jQuery || window.Zepto);
