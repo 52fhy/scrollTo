@@ -51,4 +51,4 @@
 	}
 	
 	window.$scrollTo = $scrollTo; //支持$scrollTo('300px');纯js用法
-})(window, window.jQuery || window.Zepto);
+})(window, window.jQuery || window.Zepto || undefined);
